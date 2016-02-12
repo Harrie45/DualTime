@@ -4,9 +4,9 @@
 		<title>Configurable</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</head>
 	
 	<body>
@@ -17,20 +17,102 @@
 			<h1>DualTime</h1>
 		</div>
 
+		<br/>
+
 		<div data-role="content">
 			<div ui-field-contain>
-				<div id="change" style="height: 50px; background_color: rgb(255,255,0);">
-				<b>Difference with UTC</b>
-				</div>
-				<fieldset data-role="controlgroup">
-					Upper time on Pebble
-					<input type="range" name="first_zone" id="first_zone" value="0" min="-12" max="12" step="0.5" data-highlight="true">
-					<br>
-					Lower time on Pebble
-					<input type="range" name="second_zone" id="second_zone" value="0" min="-12" max="12" step="0.5" data-highlight="true">
+				<fieldset>
+					<label for="first_zone">Upper time on Pebble</label>
+					<select name="first_zone" id="first_zone">
+						<option value="-12:00">UTC-12:00</option>
+						<option value="-11:00">UTC-11:00</option>
+						<option value="-10:00">UTC-10:00</option>
+						<option value="-09:30">UTC-09:30</option>
+						<option value="-09:00">UTC-09:00</option>
+						<option value="-08:00">UTC-08:00</option>
+						<option value="-07:00">UTC-07:00</option>
+						<option value="-06:00">UTC-06:00</option>
+						<option value="-05:00">UTC-05:00</option>
+						<option value="-04:30">UTC-04:30</option>
+						<option value="-04:00">UTC-04:00</option>
+						<option value="-03:30">UTC-03:30</option>
+						<option value="-03:00">UTC-03:00</option>
+						<option value="-02:00">UTC-02:00</option>
+						<option value="-01:00">UTC-01:00</option>
+						<option value="=00:00">UTC</option>
+						<option value="+01:00">UTC+01:00</option>
+						<option value="+02:00">UTC+02:00</option>
+						<option value="+03:00">UTC+03:00</option>
+						<option value="+03:30">UTC+03:30</option>
+						<option value="+04:00">UTC+04:00</option>
+						<option value="+04:30">UTC+04:30</option>
+						<option value="+05:00">UTC+05:00</option>
+						<option value="+05:30">UTC+05:30</option>
+						<option value="+05:45">UTC+05:45</option>
+						<option value="+06:00">UTC+06:00</option>
+						<option value="+06:30">UTC+06:30</option>
+						<option value="+07:00">UTC+07:00</option>
+						<option value="+08:00">UTC+08:00</option>
+						<option value="+08:30">UTC+08:30</option>
+						<option value="+08:45">UTC+08:45</option>
+						<option value="+09:00">UTC+09:00</option>
+						<option value="+09:45">UTC+09:45</option>
+						<option value="+10:00">UTC+10:00</option>
+						<option value="+10:30">UTC+10:30</option>
+						<option value="+11:00">UTC+11:00</option>
+						<option value="+12:00">UTC+12:00</option>
+						<option value="+12:45">UTC+12:45</option>
+						<option value="+13:00">UTC+13:00</option>
+						<option value="+14:00">UTC+14:00</option>
+					</select>
+					<br/>
+					<label for="second_zone">Lower time on Pebble</label>
+					<select name="second_zone" id="second_zone">
+						<option value="-12:00">UTC-12:00</option>
+						<option value="-11:00">UTC-11:00</option>
+						<option value="-10:00">UTC-10:00</option>
+						<option value="-09:30">UTC-09:30</option>
+						<option value="-09:00">UTC-09:00</option>
+						<option value="-08:00">UTC-08:00</option>
+						<option value="-07:00">UTC-07:00</option>
+						<option value="-06:00">UTC-06:00</option>
+						<option value="-05:00">UTC-05:00</option>
+						<option value="-04:30">UTC-04:30</option>
+						<option value="-04:00">UTC-04:00</option>
+						<option value="-03:30">UTC-03:30</option>
+						<option value="-03:00">UTC-03:00</option>
+						<option value="-02:00">UTC-02:00</option>
+						<option value="-01:00">UTC-01:00</option>
+						<option value="=00:00">UTC</option>
+						<option value="+01:00">UTC+01:00</option>
+						<option value="+02:00">UTC+02:00</option>
+						<option value="+03:00">UTC+03:00</option>
+						<option value="+03:30">UTC+03:30</option>
+						<option value="+04:00">UTC+04:00</option>
+						<option value="+04:30">UTC+04:30</option>
+						<option value="+05:00">UTC+05:00</option>
+						<option value="+05:30">UTC+05:30</option>
+						<option value="+05:45">UTC+05:45</option>
+						<option value="+06:00">UTC+06:00</option>
+						<option value="+06:30">UTC+06:30</option>
+						<option value="+07:00">UTC+07:00</option>
+						<option value="+08:00">UTC+08:00</option>
+						<option value="+08:30">UTC+08:30</option>
+						<option value="+08:45">UTC+08:45</option>
+						<option value="+09:00">UTC+09:00</option>
+						<option value="+09:45">UTC+09:45</option>
+						<option value="+10:00">UTC+10:00</option>
+						<option value="+10:30">UTC+10:30</option>
+						<option value="+11:00">UTC+11:00</option>
+						<option value="+12:00">UTC+12:00</option>
+						<option value="+12:45">UTC+12:45</option>
+						<option value="+13:00">UTC+13:00</option>
+						<option value="+14:00">UTC+14:00</option>
+					</select>
 				</fieldset>
 			</div>
 
+			<br/>
 			<br/>
 			<div ui-field-contain>
 				<div class="ui-body ui-body-b">
@@ -45,9 +127,6 @@
 			<br/>
 			<div ui-field-contain>
 				<b>If you like this watchface, LIKE it, give it a HEART.</b>
-				<br>
-				<br>
-				Latest version 1.0
 			</div>
 
 		</div>
@@ -66,7 +145,7 @@
 
 			$().ready(function() {
 
-			$("#b-cancel").click(function() {
+				$("#b-cancel").click(function() {
 					console.log("Cancel");
 					document.location = "pebblejs://close";
 				});
@@ -81,15 +160,20 @@
 
 				
 				//Set form values to whatever is passed in.
+				$("#first_zone").selectmenu({style: 'dropdown'});
+				$("#second_zone").selectmenu({style: 'dropdown'});
+
 				var obj = jQuery.parseJSON(decodeURIComponent(window.location.search.substring(1)));
 				console.log(obj);
 				for(key in obj) {
 					$("#"+[key]).val(obj[key]);
 					if (key === 'first_zone' || key === 'second_zone')
 					{
-						$("#"+[key]).slider("refresh");
+						$("#"+[key]).val(obj[key]).attr("selected",true);
 					}
 				}
+				$("#first_zone").selectmenu("refresh");
+				$("#second_zone").selectmenu("refresh");
 
 			});
 
