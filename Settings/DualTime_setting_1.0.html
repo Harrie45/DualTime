@@ -1,132 +1,135 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Configurable</title>
-		<meta charset="utf-8">
+		<title>DualTime</title>
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
 	</head>
 	
 	<body>
 	
-	<div data-role="page" id="main">
+	<div data-role="page">
 	
-		<div data-role="header" class="jqm-header">
+		<div data-role="header">
 			<h1>DualTime</h1>
 		</div>
 
 		<br/>
 
 		<div data-role="content">
-			<div ui-field-contain>
-				<fieldset>
-					<label for="first_zone">Upper time on Pebble</label>
-					<select name="first_zone" id="first_zone">
-						<option value="-12:00">UTC-12:00</option>
-						<option value="-11:00">UTC-11:00</option>
-						<option value="-10:00">UTC-10:00</option>
-						<option value="-09:30">UTC-09:30</option>
-						<option value="-09:00">UTC-09:00</option>
-						<option value="-08:00">UTC-08:00</option>
-						<option value="-07:00">UTC-07:00</option>
-						<option value="-06:00">UTC-06:00</option>
-						<option value="-05:00">UTC-05:00</option>
-						<option value="-04:30">UTC-04:30</option>
-						<option value="-04:00">UTC-04:00</option>
-						<option value="-03:30">UTC-03:30</option>
-						<option value="-03:00">UTC-03:00</option>
-						<option value="-02:00">UTC-02:00</option>
-						<option value="-01:00">UTC-01:00</option>
-						<option value="=00:00">UTC</option>
-						<option value="+01:00">UTC+01:00</option>
-						<option value="+02:00">UTC+02:00</option>
-						<option value="+03:00">UTC+03:00</option>
-						<option value="+03:30">UTC+03:30</option>
-						<option value="+04:00">UTC+04:00</option>
-						<option value="+04:30">UTC+04:30</option>
-						<option value="+05:00">UTC+05:00</option>
-						<option value="+05:30">UTC+05:30</option>
-						<option value="+05:45">UTC+05:45</option>
-						<option value="+06:00">UTC+06:00</option>
-						<option value="+06:30">UTC+06:30</option>
-						<option value="+07:00">UTC+07:00</option>
-						<option value="+08:00">UTC+08:00</option>
-						<option value="+08:30">UTC+08:30</option>
-						<option value="+08:45">UTC+08:45</option>
-						<option value="+09:00">UTC+09:00</option>
-						<option value="+09:45">UTC+09:45</option>
-						<option value="+10:00">UTC+10:00</option>
-						<option value="+10:30">UTC+10:30</option>
-						<option value="+11:00">UTC+11:00</option>
-						<option value="+12:00">UTC+12:00</option>
-						<option value="+12:45">UTC+12:45</option>
-						<option value="+13:00">UTC+13:00</option>
-						<option value="+14:00">UTC+14:00</option>
-					</select>
-					<br/>
-					<label for="second_zone">Lower time on Pebble</label>
-					<select name="second_zone" id="second_zone">
-						<option value="-12:00">UTC-12:00</option>
-						<option value="-11:00">UTC-11:00</option>
-						<option value="-10:00">UTC-10:00</option>
-						<option value="-09:30">UTC-09:30</option>
-						<option value="-09:00">UTC-09:00</option>
-						<option value="-08:00">UTC-08:00</option>
-						<option value="-07:00">UTC-07:00</option>
-						<option value="-06:00">UTC-06:00</option>
-						<option value="-05:00">UTC-05:00</option>
-						<option value="-04:30">UTC-04:30</option>
-						<option value="-04:00">UTC-04:00</option>
-						<option value="-03:30">UTC-03:30</option>
-						<option value="-03:00">UTC-03:00</option>
-						<option value="-02:00">UTC-02:00</option>
-						<option value="-01:00">UTC-01:00</option>
-						<option value="=00:00">UTC</option>
-						<option value="+01:00">UTC+01:00</option>
-						<option value="+02:00">UTC+02:00</option>
-						<option value="+03:00">UTC+03:00</option>
-						<option value="+03:30">UTC+03:30</option>
-						<option value="+04:00">UTC+04:00</option>
-						<option value="+04:30">UTC+04:30</option>
-						<option value="+05:00">UTC+05:00</option>
-						<option value="+05:30">UTC+05:30</option>
-						<option value="+05:45">UTC+05:45</option>
-						<option value="+06:00">UTC+06:00</option>
-						<option value="+06:30">UTC+06:30</option>
-						<option value="+07:00">UTC+07:00</option>
-						<option value="+08:00">UTC+08:00</option>
-						<option value="+08:30">UTC+08:30</option>
-						<option value="+08:45">UTC+08:45</option>
-						<option value="+09:00">UTC+09:00</option>
-						<option value="+09:45">UTC+09:45</option>
-						<option value="+10:00">UTC+10:00</option>
-						<option value="+10:30">UTC+10:30</option>
-						<option value="+11:00">UTC+11:00</option>
-						<option value="+12:00">UTC+12:00</option>
-						<option value="+12:45">UTC+12:45</option>
-						<option value="+13:00">UTC+13:00</option>
-						<option value="+14:00">UTC+14:00</option>
-					</select>
+		
+			<label for="first_zone">Upper time on Pebble</label>
+			<select name="first_zone" id="first_zone">
+				<option value="-12:00">UTC-12:00</option>
+				<option value="-11:00">UTC-11:00</option>
+				<option value="-10:00">UTC-10:00</option>
+				<option value="-09:30">UTC-09:30</option>
+				<option value="-09:00">UTC-09:00</option>
+				<option value="-08:00">UTC-08:00</option>
+				<option value="-07:00">UTC-07:00</option>
+				<option value="-06:00">UTC-06:00</option>
+				<option value="-05:00">UTC-05:00</option>
+				<option value="-04:30">UTC-04:30</option>
+				<option value="-04:00">UTC-04:00</option>
+				<option value="-03:30">UTC-03:30</option>
+				<option value="-03:00">UTC-03:00</option>
+				<option value="-02:00">UTC-02:00</option>
+				<option value="-01:00">UTC-01:00</option>
+				<option value="=00:00">UTC</option>
+				<option value="+01:00">UTC+01:00</option>
+				<option value="+02:00">UTC+02:00</option>
+				<option value="+03:00">UTC+03:00</option>
+				<option value="+03:30">UTC+03:30</option>
+				<option value="+04:00">UTC+04:00</option>
+				<option value="+04:30">UTC+04:30</option>
+				<option value="+05:00">UTC+05:00</option>
+				<option value="+05:30">UTC+05:30</option>
+				<option value="+05:45">UTC+05:45</option>
+				<option value="+06:00">UTC+06:00</option>
+				<option value="+06:30">UTC+06:30</option>
+				<option value="+07:00">UTC+07:00</option>
+				<option value="+08:00">UTC+08:00</option>
+				<option value="+08:30">UTC+08:30</option>
+				<option value="+08:45">UTC+08:45</option>
+				<option value="+09:00">UTC+09:00</option>
+				<option value="+09:45">UTC+09:45</option>
+				<option value="+10:00">UTC+10:00</option>
+				<option value="+10:30">UTC+10:30</option>
+				<option value="+11:00">UTC+11:00</option>
+				<option value="+12:00">UTC+12:00</option>
+				<option value="+12:45">UTC+12:45</option>
+				<option value="+13:00">UTC+13:00</option>
+				<option value="+14:00">UTC+14:00</option>
+			</select>
+	
+			<br/>
+	
+			<label for="second_zone">Lower time on Pebble</label>
+			<select name="second_zone" id="second_zone">
+				<option value="-12:00">UTC-12:00</option>
+				<option value="-11:00">UTC-11:00</option>
+				<option value="-10:00">UTC-10:00</option>
+				<option value="-09:30">UTC-09:30</option>
+				<option value="-09:00">UTC-09:00</option>
+				<option value="-08:00">UTC-08:00</option>
+				<option value="-07:00">UTC-07:00</option>
+				<option value="-06:00">UTC-06:00</option>
+				<option value="-05:00">UTC-05:00</option>
+				<option value="-04:30">UTC-04:30</option>
+				<option value="-04:00">UTC-04:00</option>
+				<option value="-03:30">UTC-03:30</option>
+				<option value="-03:00">UTC-03:00</option>
+				<option value="-02:00">UTC-02:00</option>
+				<option value="-01:00">UTC-01:00</option>
+				<option value="=00:00">UTC</option>
+				<option value="+01:00">UTC+01:00</option>
+				<option value="+02:00">UTC+02:00</option>
+				<option value="+03:00">UTC+03:00</option>
+				<option value="+03:30">UTC+03:30</option>
+				<option value="+04:00">UTC+04:00</option>
+				<option value="+04:30">UTC+04:30</option>
+				<option value="+05:00">UTC+05:00</option>
+				<option value="+05:30">UTC+05:30</option>
+				<option value="+05:45">UTC+05:45</option>
+				<option value="+06:00">UTC+06:00</option>
+				<option value="+06:30">UTC+06:30</option>
+				<option value="+07:00">UTC+07:00</option>
+				<option value="+08:00">UTC+08:00</option>
+				<option value="+08:30">UTC+08:30</option>
+				<option value="+08:45">UTC+08:45</option>
+				<option value="+09:00">UTC+09:00</option>
+				<option value="+09:45">UTC+09:45</option>
+				<option value="+10:00">UTC+10:00</option>
+				<option value="+10:30">UTC+10:30</option>
+				<option value="+11:00">UTC+11:00</option>
+				<option value="+12:00">UTC+12:00</option>
+				<option value="+12:45">UTC+12:45</option>
+				<option value="+13:00">UTC+13:00</option>
+				<option value="+14:00">UTC+14:00</option>
+			</select>
+
+			<br/>
+			<br/>
+
+			<div class="ui-body ui-body-b">
+				<fieldset class="ui-grid-b">
+					<div class="ui-block-a"><button type="submit" data-theme="a" id="b-cancel">Cancel</button></div>
+					<div class="ui-block-b"></div>
+					<div class="ui-block-c"><button type="submit" data-theme="a" id="b-submit">Submit</button></div>
 				</fieldset>
 			</div>
-
-			<br/>
-			<br/>
-			<div ui-field-contain>
-				<div class="ui-body ui-body-b">
-					<fieldset class="ui-grid-a">
-						<div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
-						<div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Submit</button></div>
-					</fieldset>
-				</div>
-			</div>
 			
-
 			<br/>
-			<div ui-field-contain>
-				<b>If you like this watchface, LIKE it, give it a HEART.</b>
+			Note: The horizontal line in the middle of the watchface shows the battery status.
+			<br/>
+			<br/>
+			
+			<div data-role="footer">
+				<h1>If you like this watchface:</h1>
+				<h1>LIKE it, give it a HEART.</h1>
 			</div>
 
 		</div>
